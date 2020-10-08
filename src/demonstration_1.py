@@ -23,4 +23,16 @@ if there is a mathematical approach that you can take.*
 """
 def to_lower_case(string):
     # Your code here
+    result = ""
+
+    for c in string:
+        if 65 <= ord(c) and ord(c) <= 90:
+            lowercase = ord(c) + 32
+            c = chr(lowercase)
+        
+        result += c
+
+    return result
+
+print(to_lower_case("LowerCase"))
 
